@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Base CSS*/
+body{font-family: 'Droid Serif';background:#374E5A; overflow: auto;}
+
+.col {
+  width:46%;
+  margin:1%;
+  background:#5a7b6c;
+  border-radius:6px;
+  padding: 2em;
+  float:left;
+}
+
+.col:nth-child(odd){
+  background:#8fb87f;
+}
+
+.col p{
+  color:#fff;
+  text-shadow: 1px 1px #000;
+}
+
+.fancy{display:none;}
+
+/*media query*/
+
+@media screen and (min-width:760px){
+  .col {
+    width:45%;
+    margin:3%;
+  }
+  
+  .col:nth-child(even){
+    background:blue;
+    color: orange;
+}
+
+@media screen and (max-width:980px){
+  .col{
+    float:none;
+    width:50%;
+    margin: 5px auto;
+  }
+  
+  .col:nth-child(odd){
+    background:purple;
+    color: yellow;
+  }
+}
