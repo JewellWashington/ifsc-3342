@@ -335,7 +335,6 @@ main.container{
   grid-gap: 1em;
   grid-template-areas:
     "title"
-    "title2"
     "about"
     "education"
     "experience"
@@ -346,16 +345,12 @@ main.container{
 .page-title{
   grid-area: title;
 }
-.page-title2{
-  grid-area: title2;
-}
+
 #about{
   grid-area: about;
 }
 #skills{
   grid-area: skills;
-  display:flex;
-  flex-direction: column;
 
 }
 #software{
@@ -421,21 +416,40 @@ main.container {
 /*----------------------Desktop Breakpoint-----------------------*/
 
 @media screen and (min-width:992px) {
+  
   main.container {
-    max-width:1280px;
-    grid-template-columns: 45.5% auto;
+    max-width: 1280px;
+    grid-template-columns: 50.5% auto;
     grid-template-areas:
       "title title title title"
-      "education education education"
+      "education education"
       "about about about"
-      "experience experience experience"
+      "experience experience"
       "software . skills";
   }
   header.container{
-    max-width:1280px;
+    max-width: 1280px;
   }  
 
-
+.details{
+  grid-area:details;
+  padding: 10px;
+  margin: 0px auto;
+  text-align: center;
+}
+.bio{
+  grid-area:bio;
+  margin: 10px
+  padding:15px;
+}
+#about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: 325px 1fr auto;
+    grid-template-areas:
+      "bio details details"
+      "related related related"
+  }
 
 
 
@@ -443,7 +457,7 @@ main.container {
 
 @media only screen and (max-width: 460px) {
   .related-links li a svg{display:none;}
-  
+  padding: 25px;
 }
    
 
