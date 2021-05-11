@@ -23,6 +23,10 @@ body{
   display: block;
 }
 
+.topnav .active{
+  font-size: 36px;
+}
+
 /* Style the hamburger menu */
 .topnav a.icon {
   background: black;
@@ -39,32 +43,44 @@ body{
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-  width:55%;/* Full width */
+  width:70%;/* Full width */
   height: auto;
-  padding:15px; /*some padding*/
+  padding:25px; /*some padding*/
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin: 25px;
+  margin: 10px;
 }
 
 label{
   font-weight: 600;
   font-size: 22px;
-  margin: 25px;
+  margin: 15px;
   padding: 0;
+}
+
+.container{
+  margin: 25px;
 }
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: black;
+  width: 15%;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
   color: white;
-  padding: 20px;
-  text-align: left;
   border: none;
+  padding: 10px;
   border-radius: 4px;
   cursor: pointer;
-  
+}
+
+.title{
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -72,55 +88,112 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container{
-  margin: 35px auto;
-  display: grid;
-  grid-gap: 50px 50px
-  grid-template-columns: auto auto;
+.img {
+  float: left;
+  width: 50%;
+}
+.quote {
+  float: left;
+  width: 50%;
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 600;
+  line-height: 1.8;
+  font-size: 28px;
+  margin-top:85px;
+  letter-spacing: 3px;
 }
 
-
-.artist{
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  font-weight:600;
-  font-variant:small-caps;
-  font-size: 22px;
-  margin: 15px;
-}
-.img{
-  display: flex;
-  float: right;
+.row{
   margin: 25px;
-  max-width: 100%;
-  height: auto;
-}
-.blockquote-footer{
-  font-weight:400;
-  font-variant:small-caps;
-  font-size: 18px;
-}
-.blockquote text-right{
-  margin: 25px;
-  display: block;
-  padding: 25px;
 }
 
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 .img-fluid2{
-  padding: 25px;
+  padding: 15px;
+}
+
+.sketches{
+  margin: 20px;
+  padding: 10px;
+}
+
+.art{
+  font-size: 34px;
+  font-family: 'Adamina', serif;
+  text-align: center;
+  margin-right: 50px;
+}
+
+p{
+  margin: 20px;
+  font-weight:500;
+  font-variant:small-caps;
+  font-size: 18px;
+  font-family: 'Adamina', serif;
+  text-align: center;
+  }
+  
+.description {
+  float: left;
+  width: 25%;
+  font-family: 'Adamina', serif;
+  font-size: 20px;
+}
+
+.description h3{
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+}
+
+.art2 {
+  float: left;
+  width: 25%;
 }
 
 h1{
-  margin: 10px;
-  padding: 0;
+  font-family: 'Adamina', serif;
+  font-size: 26px;
 }
 
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column1 {
+  float: left;
+  width: 33.33%;
+}
 
+/* Clear floats after image containers */
+.row3::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column2 {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after image containers */
+.row4::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 
